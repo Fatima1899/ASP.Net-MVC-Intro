@@ -1,0 +1,29 @@
+﻿
+@using products.Models
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Detail</h1>
+
+<div class="row mt-5">
+@foreach (var product in Model)
+{
+ <div class="col-md-4" >
+  <div class="card"  style="width: 18rem;">
+  <img src="~/img/@product.Image" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h1>@product.Name</h1>
+    <h5 class="card-title">@product.Content</h5>
+    <h5 class="card-title">@product.Color</h5>
+    <p class="card-text">@product.Price</p>
+    <p class="card-text">@product.Description</p>
+  </div>
+</div> 
+  </div>
+}
+</div>
+
+
